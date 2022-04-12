@@ -2,9 +2,8 @@
  * Biblioteca.h
  *
  *  Created on: 11 abr. 2022
- *      Author: Lucas
+ *      Author: Lucas Fernando Gomez Carmona
  */
-
 #ifndef BIBLIOTECA_H_
 #define BIBLIOTECA_H_
 
@@ -81,13 +80,5 @@ void InformarResultados(float, float, float, float);
 /// @param Float Valor flotante.
 /// @return Float Diferencia entre flotantes.
 float CalcularDiferencia(float, float);
-
-
-
-
-
-
-
-
 
 #endif /* BIBLIOTECA_H_ */

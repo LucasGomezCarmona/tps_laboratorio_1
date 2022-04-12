@@ -2,7 +2,7 @@
  * Biblioteca.c
  *
  *  Created on: 11 abr. 2022
- *      Author: lucas
+ *      Author: Lucas Fernando Gomez Carmona
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -126,14 +126,3 @@ float CalcularDiferencia(float primerValor, float segundoValor)
 	}
 	return diferencia;
 }
-
-
-
-
-
-
-
-
-
-
-
