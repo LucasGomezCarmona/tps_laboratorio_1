@@ -113,7 +113,7 @@ int main(void)
 
 			case 5:
 				LimpiarConsola();
-				printf("Calculando...\n");
+				printf("\nCalculando...\n");
 				precioDebitoLatam=CalcularDescuento(159339, 10);
 				precioCreditoLatam=CalcularRecargo(159339, 25);
 				precioBitcoinLatam=DividirDosFlotantes(159339, 4606954.55);
