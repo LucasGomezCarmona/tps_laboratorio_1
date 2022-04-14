@@ -17,7 +17,7 @@ int IngresarEnteroMinMax(char mensaje[], int minimo, int maximo)
 		scanf("%d", &numeroIngresado);
 
 	}while(numeroIngresado<minimo || numeroIngresado>maximo);
-
+	
 	return numeroIngresado;
 }
 
@@ -79,9 +79,9 @@ float CalcularRecargo(float precio, float recargo)
 
 //=============================================================================================================
 
-void MostrarMenu(void)
+void MostrarMenu(int kilometros, float aerolineas, float latam)
 {
-	printf("1. Ingresar Kilometros.\n2. Ingresar Precio de Vuelos. \n3. Calcular todos los costos.");
+	printf("1. Ingresar Kilometros.(%d km)\n2. Ingresar Precio de Vuelos.(Aerolineas: $%.2f| Latam: $%.2f) \n3. Calcular todos los costos.", kilometros, aerolineas, latam);
 	printf("\n4. Informar Resultados.\n5. Carga forzada de datos.\n6. Salir\n");
 }
 
@@ -102,6 +102,8 @@ float DividirDosFlotantes(float valorDividendo, float valorDivisor)
 
 	return valorCociente;
 }
+
+//=============================================================================================================
 
 void InformarResultados(float debito, float credito, float bitcoin, float unitario)
 {

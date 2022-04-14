@@ -54,21 +54,26 @@ int main(void)
 
 	banderaKm=0;
 	banderaPrecios=0;
+	kilometrosIngresados=0;
+	precioIngresadoAerolineas=0;
+	precioIngresadoLatam=0;
 
 	do
 	{
-		MostrarMenu();
+		MostrarMenu(kilometrosIngresados, precioIngresadoAerolineas, precioIngresadoLatam);
 		opcionIngresada=IngresarEnteroMinMax("Ingrese una opcion: ", 1, 6);
 
 		switch(opcionIngresada)
 		{
 			case 1:
+				LimpiarConsola();
 				kilometrosIngresados=IngresarEnteroMin("Ingrese los Kilometros: ", 1);
 				banderaKm=1;
 				LimpiarConsola();
 				break;
 
 			case 2:
+				LimpiarConsola();
 				precioIngresadoAerolineas=IngresarFlotanteMin("Ingrese los precios de los vuelos.\n- Precio vuelo Aerolineas: $", 1);
 				precioIngresadoLatam=IngresarFlotanteMin("- Precio vuelo Latam: $", 1);
 				banderaPrecios=1;
@@ -76,6 +81,7 @@ int main(void)
 				break;
 
 			case 3:
+				LimpiarConsola();
 					if(banderaPrecios==1 && banderaKm==1)
 					{
 						printf("Calculando...\n");
@@ -93,18 +99,20 @@ int main(void)
 				break;
 
 			case 4:
+				LimpiarConsola();
 				if(banderaPrecios==1 && banderaKm==1)
 				{
 					printf("Latam:\n");
 					InformarResultados(precioDebitoLatam, precioCreditoLatam, precioBitcoinLatam, precioUnitarioLatam);
-					printf("Aerolineas:\n");
+					printf("\nAerolineas:\n");
 					InformarResultados(precioDebitoAerolineas, precioCreditoAerolineas, precioBitcoinAerolineas, precioUnitarioAerolineas);
-					printf("La diferencia de precio es: $%.2f", diferenciaDePrecio);
+					printf("\nLa diferencia de precio es: $%.2f", diferenciaDePrecio);
 				}
 				LimpiarConsola();
 				break;
 
 			case 5:
+				LimpiarConsola();
 				printf("Calculando...\n");
 				precioDebitoLatam=CalcularDescuento(159339, 10);
 				precioCreditoLatam=CalcularRecargo(159339, 25);
@@ -115,7 +123,7 @@ int main(void)
 				precioBitcoinAerolineas=DividirDosFlotantes(162965, 4606954.55);
 				precioUnitarioAerolineas=DividirDosFlotantes(162965, 7090);
 				diferenciaDePrecio=CalcularDiferencia(159339, 162965);
-				printf("KMs Ingresados: 7090km\n");
+				printf("KMs Ingresados: 7090km\n\n");
 				printf("Precio Aerolineas: $162965\n");
 				InformarResultados(precioDebitoAerolineas, precioCreditoAerolineas, precioBitcoinAerolineas, precioUnitarioAerolineas);
 				printf("\nPrecio Latam: $159339\n");

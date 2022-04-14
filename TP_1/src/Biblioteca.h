@@ -49,7 +49,7 @@ float CalcularRecargo(float, float);
 //=============================================================================================================
 
 /// @brief Funcion que muestra el menu inicial;
-void MostrarMenu(void);
+void MostrarMenu(int, float, float);
 
 //=============================================================================================================
 
